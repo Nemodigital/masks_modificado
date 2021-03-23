@@ -1,0 +1,554 @@
+/* colores */
+:root {
+--color-bg-primario: #0378A6;
+--color-bg-second: #0388A6;
+--color-bg-terc: #04C4D9;
+--color-bg-cuart: #BFD6D9;
+--color-bg-quin: #59D9B5;
+--color-bg-sex: #f0f2f3;
+
+}
+
+/* fuentes */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--color-bg-cuart);
+    color:var(--color-bg-sex)
+}
+.texto-azul {
+    color: var(--color-bg-second);
+}
+.texto-blanco {
+    color: var(--color-bg-sex);
+}
+
+/** Redes Sociales **/
+.sociales ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.sociales ul li {
+    position: relative;
+    display: inline-block;
+}
+.sociales ul li a::before {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    vertical-align: top;
+    padding: 0.4rem;
+    content: '\f08e'; 
+    -webkit-font-smoothing: antialiased;
+    font-size: 2rem;
+    color: var(--color-bg-terc);
+}
+.sociales ul li a[href*="facebook.com"]::before{
+    content: '\f230';
+}
+.sociales ul li a[href*="twitter.com"]::before{
+    content: '\f081';
+}
+.sociales ul li a[href*="instagram.com"]::before{
+    content: '\f16d';
+}
+.sociales ul li a[href*="pinterest.com"]::before{
+    content: '\f0d2';
+}
+.sociales ul li a[href*="youtube.com"]::before{
+    content: '\f16a';
+}
+
+/* NAVEGACION */
+/* color verde */
+.navegacion {
+    background-color:var(--color-bg-second);
+}
+/* hacer blanco el botón de hamburguesa */
+.navbar-light .navbar-toggler {
+    background-color: #ffffff;
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover {
+    color: #ffffff;
+}
+
+/* enlaces */
+.nav-link {
+    color: var(--color-bg-sex);
+    font-size: 1.4rem;
+    transition: background-color .5s ease-in-out;
+    font-family: 'Roboto', sans-serif;
+}
+@media (min-width: 768px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+     .nav-link {
+        font-size: 1.2rem;
+     } 
+ }
+
+.nav-link:hover {
+    background-color: var(--color-bg-cuart);
+    color: var(--color-bg-second);
+}
+/* slide */
+.carousel-control-prev {
+    border: none;
+    background-color: transparent;
+}
+.carousel-control-next {
+    border: none;
+    background-color: transparent;
+}
+.carousel-item h5 {
+    background-color: var(--color-bg-sex);
+    padding: 1rem;
+}
+/* Botones */
+.btn-primary {
+    background-color:var(--color-bg-quin);
+    border: 0;
+    padding: 1rem 5rem;
+    border-radius: 0;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.btn-primary:hover {
+    transform: scale(1.1);
+    background-color:var(--color-bg-quin);
+    color: var(--color-bg-second);
+}
+@media (min-width: 768px) {
+    .btn-primary {
+        padding: 0;
+    }
+ }
+
+/** Somos fabricantes **/
+.fondo-principal {
+    background-color: var(--color-bg-second);
+    min-height: 33rem;
+}
+.imagen-fabrica {
+    min-height: 20rem;
+    background-image: url(../img/fabrica.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* media querys */
+@media (min-width: 768px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+    .fondo-principal {
+        min-height: 15rem;
+     } 
+    .imagen-fabrica {
+         height: 25rem;
+         background-size: 100%;
+     } 
+     .contenido-f-principal h2 {
+        font-size: 1.5rem;
+        padding-top: 2rem;
+     }
+     .contenido-f-principal h4 {
+        font-size: 1.2rem;
+     }
+     .contenido-f-principal p {
+        font-size: 0.9rem;
+     }
+ }
+@media (min-width: 992px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+     .imagen-fabrica {
+         height: 28rem;
+         background-size: 100%;
+     } 
+     .fondo-principal {
+        min-height: 20rem;
+     }
+ }
+ @media (min-width: 1200px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+     .imagen-fabrica {
+         height: 30rem;
+         background-size: 100%;
+     } 
+     .contenido-f-principal h2 {
+        font-size: 3rem;
+     }
+     .contenido-f-principal h4 {
+        font-size: 1.5rem;
+     }
+ }
+ @media (min-width: 1400px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+     .imagen-fabrica {
+         height: 35rem;
+         background-size: 100%;
+     } 
+     .contenido-f-principal h2 {
+        font-size: 3.5rem;
+     }
+     .contenido-f-principal h4 {
+        font-size: 1.8rem;
+     }
+     .contenido-f-principal p {
+        font-size: 1.2rem;
+     }
+ }
+
+
+
+/* composición */
+.composicion {
+    min-height: 33rem;
+}
+.composicion h3{
+    color: var(--color-bg-second);
+}
+
+.imagen-composicion {
+    min-height: 30rem;
+    background-size: 90%;
+    background-image: url(../img/mascarillas-quirurgicas-3-capas.png);
+    background-repeat: no-repeat;
+}
+/* creamos un media query para que se vean las imágenes grandes y más altas en pantalla grande y tablet */
+@media (min-width: 480px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+    .composicion {
+        min-height:15rem;
+    } 
+    .imagen-composicion {
+        min-height: 25rem;
+        background-size: 95%;
+     } 
+     .composicion h3 {
+         font-size: 1.3rem;
+     }
+     .composicion p {
+        font-size: 0.9rem;
+     }
+ }
+ @media (min-width: 576px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+    .composicion {
+        min-height:15rem;
+    } 
+    .imagen-composicion {
+        min-height: 30rem;
+        background-size: 95%;
+     } 
+     .composicion h3 {
+         font-size: 1.3rem;
+     }
+     .composicion p {
+        font-size: 0.9rem;
+     }
+ }
+
+@media (min-width: 768px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+    .composicion {
+        min-height:15rem;
+    } 
+    .imagen-composicion {
+        min-height: 20rem;
+        background-size: 100%;
+     } 
+     .composicion h3 {
+         font-size: 1.3rem;
+     }
+     .composicion p {
+        font-size: 0.9rem;
+     }
+ }
+@media (min-width: 992px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+     .imagen-composicion {
+         min-height: 23rem;
+         background-size: 100%;
+     } 
+ }
+ @media (min-width: 1200px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+     .imagen-composicion {
+        min-height: 30rem;
+        background-size: 100%;
+     } 
+     .composicion h3 {
+        font-size: 2rem;
+    }
+ }
+ @media (min-width: 1400px) {
+    /* seleccionamos el primer div de imagen-superior e imagen-inferior */
+     .imagen-composicion {
+         height: 32rem;
+         background-size: 100%;
+     } 
+     .composicion h3 {
+        font-size: 2.5rem;
+    }
+    .composicion p {
+        font-size: 1.2rem;
+    }
+ }
+
+
+/* Catálogo */
+.encabezado {
+    font-size: 2.4rem;
+    font-family: 'Roboto', sans-serif; 
+    color: var(--color-bg-sex);
+    line-height: 2.4rem;
+}
+.encabezado span {
+    font-size: 1.8rem;
+    font-family: 'Lato', sans-serif;
+    color: var(--color-bg-sex);
+}
+@media (min-width: 768px) {
+    .catalogo-info h2 {
+        font-size: 1.8rem;
+    }
+ }
+.catalogo {
+    background-color: var(--color-bg-second);
+}
+.catalogo p {
+    font-family: 'Lato', sans-serif;
+    color: var(--color-bg-sex);
+    font-size: 1.6rem;
+}
+.imagen-catalogo {
+    border: 6px solid #ffffff;
+    -webkit-transition: transform .3s ease;
+    -ms-transition: transform .3s ease;
+    transition: transform .3s ease;
+}
+
+.catalogo-info {
+    background-color: var(--color-bg-second);
+    margin-top: -1rem;
+    width: 95%;
+}
+
+@media (min-width: 768px) {
+    .catalogo-info {
+        width: 90%;
+    }
+}
+/* página catalogo */
+.fondo-catalogo {
+    background-color: var(--color-bg-second);
+    height: 15rem;
+    color:var(--color-bg-sex)
+}
+.imagen-mascarilla {
+    min-height: 15rem;
+    background-image: url(../img/higienicas.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.imagen-mascarilla-tela {
+    min-height: 15rem;
+    background-image: url(../img/tela.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.imagen-mascarilla-ffp2 {
+    min-height: 15rem;
+    background-image: url(../img/fpp2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.productos .card {
+    border: none;
+}
+.productos .card-body {
+    background-color: var(--color-bg-second);
+}
+
+.productos .card-title {
+    color: var(--color-bg-sex);
+    font-size: 1.5rem;
+}
+.productos .card-text {
+    font-size: 1rem;
+    color: var(--color-bg-sex);
+}
+
+/* producto especificaciones */
+.imagen-mascarilla {
+    border: 1px solid var(--color-bg-second);
+}
+.contenido-mascarillas h4, h5, p, ol {
+    color: var(--color-bg-second);
+}
+/* listas productos especificaciones */
+ol {
+    list-style-type: none;
+    counter-reset: lista-personalizada;
+    margin-top: 2rem;
+    }
+    
+    ol li {
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 4px 0 10px 50px;
+    margin-bottom: 10px;
+    background:var(--color-bg-sex);
+    }
+    
+    ol li:before {
+    content: counter(lista-personalizada);
+    counter-increment: lista-personalizada;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 8px 8px 8px 5px;
+    background: var(--color-bg-second);
+    color: white;
+    height: 45px;
+    }
+    .volver a{
+        text-decoration: none;
+    }
+    .volver a:hover{
+        text-decoration: none;
+    }
+
+/* citas - hablamos */
+.citas {
+    background-image: url(../img/oficinas.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: var(--color-bg-sex);
+}
+@media (min-width: 992px) {
+    .citas {
+        background-size: cover;
+    }
+}
+.citas h3 {
+    font-size: 3.5rem;
+    font-family: 'Lato', sans-serif;
+}
+.citas p {
+    font-size: 1.2rem;
+    line-height: 2.6rem;
+    color: var(--color-bg-sex);
+}
+
+
+/* Hero */
+.hero {
+    position: relative;
+}
+.hero h2 {
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    background-color: var(--color-bg-quin);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 2.8rem;
+}
+.contenido-principal p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: var(--color-bg-second);
+}
+@media (min-width: 480px) {
+    .contenido-principal p {
+        text-align: justify;
+    }
+}
+@media (min-width: 992px) {
+    .contenido-principal p {
+        text-align: left;
+    }
+}
+
+/* Sidebar */
+aside {
+    background-color: var(--color-bg-second);
+}
+aside .contacto-sidebar {
+    font-size: 1.5rem;
+}
+aside a, p {
+    color: var(--color-bg-sex);
+}
+aside a:hover {
+    color: var(--color-bg-sex);
+}
+/* modal - nosotros */
+@media (min-width: 768px) {
+    .imagenes-instalaciones {
+        width: 225px;
+        margin-left: 5px;
+    }
+}
+@media (min-width: 992px) {
+    .imagenes-instalaciones {
+        width: 200px;
+        margin-left: 5px;
+    }
+}
+@media (min-width: 1200px) {
+    .imagenes-instalaciones {
+        width: 240px;
+        margin-left: 5px;
+    }
+}
+@media (min-width: 1400px) {
+    .imagenes-instalaciones {
+        width: 280px;
+        margin-left: 5px;
+    }
+}
+
+/* Contacto */
+.formulario .form-label {
+    color: var(--color-bg-second);
+    font-size: 1.5rem;
+}
+.form-check {
+    color: var(--color-bg-second);
+}
+
+
+/* footer */
+.footer-sitio {
+    background-color: var(--color-bg-second);
+}
+.footer-sitio ul {
+    list-style: none;
+    /* line-height: 2.5rem; */
+}
+.footer-sitio p {
+    color: var(--color-bg-sex);
+}
+.footer-sitio a {
+    color: var(--color-bg-sex);
+    text-decoration: none;
+}
+/* copyright */
+.copyright {
+    background-color: var(--color-bg-second);
+    color: var(--color-bg-sex);
+    font-size: .8rem;
+}
+/* RGPD */
+.rgpd p {
+    color: var(--color-bg-second);
+}
